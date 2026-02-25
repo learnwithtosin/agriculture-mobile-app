@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroFarm – Marketplace</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { poppins: ['Poppins', 'sans-serif'] },
+          colors: {
+            'agro-green': '#1a5c2a',
+            'agro-green-mid': '#2d7a3a',
+            'agro-yellow': '#f5c800',
+            'agro-bg': '#e8f0e9',
+          },
+          backgroundImage: {
+            'market-hero': "linear-gradient(to bottom, rgba(0,0,0,0.38) 0%, rgba(0,0,0,0.52) 100%), url('https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=1200&q=80')",
+          },
+          keyframes: {
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(16px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+          },
+          animation: {
+            fadeUp: 'fadeUp 0.6s ease both',
+            fadeUpD1: 'fadeUp 0.6s 0.1s ease both',
+            fadeUpD2: 'fadeUp 0.6s 0.2s ease both',
+            fadeUpD3: 'fadeUp 0.6s 0.3s ease both',
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="font-poppins bg-agro-bg">
+
+  <div class="w-full min-h-screen flex flex-col">
+
+    <!-- Hero Header -->
+    <div class="relative bg-market-hero bg-cover bg-center px-6 pt-5 pb-8">
+      <div class="flex items-center gap-4">
+        <a href="page-six.html" class="text-white hover:opacity-75 transition-opacity">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 5l-7 7 7 7"/>
+          </svg>
+        </a>
+        <h1 class="text-white font-extrabold text-3xl sm:text-4xl">Marketplace</h1>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="flex-1 bg-agro-bg px-5 pt-5 pb-6 relative">
+
+      <!-- Faint watermark -->
+      <div class="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none select-none">
+        <svg class="w-72 h-72" viewBox="0 0 90 90" fill="none">
+          <circle cx="45" cy="18" r="8" fill="#1a5c2a"/>
+          <path d="M42 56 Q22 44 28 28 Q38 36 42 56Z" fill="#1a5c2a"/>
+          <path d="M42 56 Q62 44 56 28 Q46 36 42 56Z" fill="#1a5c2a"/>
+          <path d="M42 56 Q38 68 42 78 Q46 68 42 56Z" fill="#1a5c2a"/>
+        </svg>
+      </div>
+
+      <!-- Featured Products + Filter Tabs -->
+      <div class="animate-fadeUp flex items-center gap-3 flex-wrap mb-5 relative z-10">
+        <h2 class="text-gray-900 font-bold text-lg sm:text-xl">Featured Products</h2>
+        <div class="flex gap-2 flex-wrap">
+          <button class="bg-agro-green-mid text-white text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full">All</button>
+          <button class="bg-white text-gray-700 text-xs sm:text-sm font-medium px-4 py-1.5 rounded-full border border-gray-300 hover:bg-gray-50 transition-colors">Organic</button>
+          <button class="bg-white text-gray-700 text-xs sm:text-sm font-medium px-4 py-1.5 rounded-full border border-gray-300 hover:bg-gray-50 transition-colors">NPK</button>
+        </div>
+      </div>
+
+      <!-- Product Cards -->
+      <div class="flex flex-col gap-4 relative z-10">
+
+        <!-- Product 1 -->
+        <div class="animate-fadeUpD1 bg-white rounded-2xl shadow-sm p-4 flex items-center gap-4 border border-gray-100">
+          <div class="w-24 h-24 sm:w-28 sm:h-28 flex-shrink-0 flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1585314062604-1a357de8b000?w=200&q=80" alt="NPK Fertilizer" class="w-full h-full object-contain rounded-lg" />
+          </div>
+          <div class="flex-1 min-w-0">
+            <p class="text-gray-400 font-semibold text-xs tracking-widest uppercase mb-0.5">Organic</p>
+            <h3 class="text-gray-900 font-extrabold text-lg sm:text-xl leading-tight">NPK -0:0:50</h3>
+            <p class="text-agro-green-mid font-bold text-base sm:text-lg mt-1">Rs.2400/=</p>
+            <a href="page-eight.html" class="mt-2 inline-flex items-center gap-2 border border-agro-yellow rounded-full px-4 py-1.5 text-gray-800 font-semibold text-xs sm:text-sm hover:bg-agro-yellow transition-colors">
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><path d="M6 2a1 1 0 0 0-1 1v1H3a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-2V3a1 1 0 0 0-2 0v1H7V3a1 1 0 0 0-1-1z"/></svg>
+              SHOP NOW
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="animate-fadeUpD2 bg-white rounded-2xl shadow-sm p-4 flex items-center gap-4 border border-gray-100">
+          <div class="w-24 h-24 sm:w-28 sm:h-28 flex-shrink-0 flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1585314062340-d8f0b97d0158?w=200&q=80" alt="NPK Fertilizer" class="w-full h-full object-contain rounded-lg" />
+          </div>
+          <div class="flex-1 min-w-0">
+            <p class="text-gray-400 font-semibold text-xs tracking-widest uppercase mb-0.5">Organic</p>
+            <h3 class="text-gray-900 font-extrabold text-lg sm:text-xl leading-tight">NPK -15:15:15</h3>
+            <p class="text-agro-green-mid font-bold text-base sm:text-lg mt-1">Rs.1500/=</p>
+            <a href="page-eight.html" class="mt-2 inline-flex items-center gap-2 border border-agro-yellow rounded-full px-4 py-1.5 text-gray-800 font-semibold text-xs sm:text-sm hover:bg-agro-yellow transition-colors">
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><path d="M6 2a1 1 0 0 0-1 1v1H3a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-2V3a1 1 0 0 0-2 0v1H7V3a1 1 0 0 0-1-1z"/></svg>
+              SHOP NOW
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="animate-fadeUpD3 bg-white rounded-2xl shadow-sm p-4 flex items-center gap-4 border border-gray-100">
+          <div class="w-24 h-24 sm:w-28 sm:h-28 flex-shrink-0 flex items-center justify-center">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&q=80" alt="NPK Fertilizer" class="w-full h-full object-contain rounded-lg" />
+          </div>
+          <div class="flex-1 min-w-0">
+            <p class="text-gray-400 font-semibold text-xs tracking-widest uppercase mb-0.5">Organic</p>
+            <h3 class="text-gray-900 font-extrabold text-lg sm:text-xl leading-tight">NPK -19:19:19</h3>
+            <p class="text-agro-green-mid font-bold text-base sm:text-lg mt-1">Rs.800/=</p>
+            <a href="page-eight.html" class="mt-2 inline-flex items-center gap-2 border border-agro-yellow rounded-full px-4 py-1.5 text-gray-800 font-semibold text-xs sm:text-sm hover:bg-agro-yellow transition-colors">
+              <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><path d="M6 2a1 1 0 0 0-1 1v1H3a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-2V3a1 1 0 0 0-2 0v1H7V3a1 1 0 0 0-1-1z"/></svg>
+              SHOP NOW
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Nav -->
+    <div class="bg-white border-t border-gray-200 flex items-center justify-around px-6 py-3 shadow-lg">
+      <a href="page-eight.html" class="text-gray-500 hover:text-agro-green transition-colors">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 10.5L13 3l10 7.5V22a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V10.5z"/>
+          <path d="M9 23V13h8v10"/>
+        </svg>
+      </a>
+      <a href="page-eight.html" class="text-gray-500 hover:text-agro-green transition-colors">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="7" x2="23" y2="7"/>
+          <line x1="3" y1="13" x2="23" y2="13"/>
+          <line x1="3" y1="19" x2="23" y2="19"/>
+        </svg>
+      </a>
+      <a href="page-eight.html" class="text-gray-500 hover:text-agro-green transition-colors">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="13" cy="9" r="4"/>
+          <path d="M5 22c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
+        </svg>
+      </a>
+      <a href="page-five.html" class="text-gray-500 hover:text-red-500 transition-colors">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 17l4-4-4-4"/>
+          <path d="M21 13H10"/>
+          <path d="M10 21H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+
+</body>
+</html>

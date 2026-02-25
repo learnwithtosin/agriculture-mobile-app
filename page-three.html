@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroFarm – Expert Guidance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            playfair: ['Playfair Display', 'serif'],
+            poppins: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            'agro-green': '#1a5c2a',
+            'agro-green-mid': '#2d7a3a',
+            'agro-yellow': '#f5c800',
+          },
+          backgroundImage: {
+            'farm': "linear-gradient(to bottom, rgba(25,35,50,0.70) 0%, rgba(15,25,15,0.45) 45%, rgba(8,18,8,0.70) 100%), url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1600&q=80')",
+          },
+          keyframes: {
+            popIn: {
+              '0%': { opacity: '0', transform: 'scale(0.7)' },
+              '100%': { opacity: '1', transform: 'scale(1)' },
+            },
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+          },
+          animation: {
+            popIn: 'popIn 0.9s 0.1s cubic-bezier(0.175,0.885,0.32,1.275) both',
+            fadeUp: 'fadeUp 0.9s 0.3s ease both',
+            fadeUpDelay: 'fadeUp 0.9s 0.5s ease both',
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="font-poppins">
+
+  <div class="w-full min-h-screen bg-farm bg-cover bg-center flex flex-col">
+
+    <!-- Status Bar -->
+    <div class="flex items-center justify-between px-6 pt-4 pb-2 text-white text-sm font-semibold">
+      <span>9:41</span>
+      <div class="flex items-center gap-1.5">
+        <svg width="18" height="12" viewBox="0 0 18 12" fill="white"><rect x="0" y="6" width="3" height="6" rx="1"/><rect x="4.5" y="4" width="3" height="8" rx="1"/><rect x="9" y="2" width="3" height="10" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1"/></svg>
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="white"><path d="M8 9.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/><path d="M3.5 6.5a6.5 6.5 0 0 1 9 0" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M1 4A9.9 9.9 0 0 1 15 4" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+        <svg width="26" height="13" viewBox="0 0 26 13" fill="none"><rect x="0.5" y="0.5" width="22" height="12" rx="3.5" stroke="white"/><rect x="2" y="2" width="17" height="9" rx="2" fill="white"/><path d="M23.5 4.5v4a2 2 0 0 0 0-4z" fill="white"/></svg>
+      </div>
+    </div>
+
+    <!-- Logo Circle -->
+    <div class="animate-popIn flex justify-center mt-10">
+      <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-full bg-agro-green border-4 border-white/85 flex flex-col items-center justify-center gap-2 shadow-2xl">
+        <svg class="w-20 h-20 sm:w-24 sm:h-24" viewBox="0 0 90 90" fill="none">
+          <circle cx="45" cy="18" r="8" fill="white"/>
+          <path d="M30 38 Q35 28 45 30 Q55 28 60 38" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M45 30 Q43 46 42 56" stroke="white" stroke-width="3" stroke-linecap="round"/>
+          <path d="M42 56 Q22 44 28 28 Q38 36 42 56Z" fill="white" opacity="0.9"/>
+          <path d="M42 56 Q62 44 56 28 Q46 36 42 56Z" fill="white" opacity="0.75"/>
+          <path d="M42 56 Q38 68 42 78 Q46 68 42 56Z" fill="white"/>
+          <line x1="42" y1="56" x2="42" y2="78" stroke="white" stroke-width="2"/>
+        </svg>
+        <span class="text-white font-semibold text-base sm:text-lg tracking-wide">AgroFarm</span>
+      </div>
+    </div>
+
+    <!-- Spacer -->
+    <div class="flex-1"></div>
+
+    <!-- Description Text -->
+    <div class="animate-fadeUp text-center px-10 sm:px-20 mb-10">
+      <p class="text-white/90 text-base sm:text-lg leading-relaxed">
+        Access expert agricultural guidance tailored to your needs, ensuring optimal productivity and success in your farming endeavors.
+      </p>
+    </div>
+
+    <!-- Buttons -->
+    <div class="animate-fadeUpDelay flex gap-4 px-8 sm:px-16 mb-10">
+      <a href="page-four.html" class="flex-1 bg-agro-green-mid text-white font-semibold text-sm sm:text-base rounded-full py-4 text-center leading-tight hover:bg-agro-green transition-colors shadow-lg">
+        Discover<br/>More
+      </a>
+      <a href="page-four.html" class="flex-1 bg-agro-yellow text-gray-900 font-bold text-base sm:text-lg rounded-full py-4 flex items-center justify-center gap-2 hover:brightness-105 transition-all shadow-lg">
+        Skip <span class="tracking-tighter text-lg">»</span>
+      </a>
+    </div>
+
+    <!-- Home Indicator -->
+    <div class="flex justify-center pb-3">
+      <div class="w-28 h-1 bg-white/40 rounded-full"></div>
+    </div>
+
+  </div>
+
+</body>
+</html>

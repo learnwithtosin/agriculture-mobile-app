@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgroFarm – Welcome</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            playfair: ['Playfair Display', 'serif'],
+            poppins: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            'agro-green': '#1a5c2a',
+            'agro-green-mid': '#2d7a3a',
+            'agro-yellow': '#f5c800',
+          },
+          backgroundImage: {
+            'farm': "linear-gradient(to bottom, rgba(25,35,50,0.70) 0%, rgba(15,25,15,0.45) 45%, rgba(8,18,8,0.70) 100%), url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1600&q=80')",
+          },
+          keyframes: {
+            popIn: {
+              '0%': { opacity: '0', transform: 'scale(0.7)' },
+              '100%': { opacity: '1', transform: 'scale(1)' },
+            },
+            fadeDown: {
+              '0%': { opacity: '0', transform: 'translateY(-20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+          },
+          animation: {
+            popIn: 'popIn 0.9s 0.1s cubic-bezier(0.175,0.885,0.32,1.275) both',
+            fadeDown: 'fadeDown 0.8s 0.2s ease both',
+            fadeUp: 'fadeUp 0.8s 0.3s ease both',
+            fadeUpDelay: 'fadeUp 0.8s 0.5s ease both',
+            fadeUpDelay2: 'fadeUp 0.8s 0.65s ease both',
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="font-poppins">
+
+  <div class="w-full min-h-screen bg-farm bg-cover bg-center flex flex-col">
+
+    <!-- Status Bar -->
+    <div class="flex items-center justify-between px-6 pt-4 pb-2 text-white text-sm font-semibold">
+      <span>9:41</span>
+      <div class="flex items-center gap-1.5">
+        <svg width="18" height="12" viewBox="0 0 18 12" fill="white"><rect x="0" y="6" width="3" height="6" rx="1"/><rect x="4.5" y="4" width="3" height="8" rx="1"/><rect x="9" y="2" width="3" height="10" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1"/></svg>
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="white"><path d="M8 9.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/><path d="M3.5 6.5a6.5 6.5 0 0 1 9 0" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M1 4A9.9 9.9 0 0 1 15 4" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+        <svg width="26" height="13" viewBox="0 0 26 13" fill="none"><rect x="0.5" y="0.5" width="22" height="12" rx="3.5" stroke="white"/><rect x="2" y="2" width="17" height="9" rx="2" fill="white"/><path d="M23.5 4.5v4a2 2 0 0 0 0-4z" fill="white"/></svg>
+      </div>
+    </div>
+
+    <!-- Logo -->
+    <div class="animate-popIn flex justify-center mt-6">
+      <div class="w-36 h-36 sm:w-40 sm:h-40 rounded-full bg-agro-green border-4 border-white/85 flex flex-col items-center justify-center gap-1.5 shadow-2xl">
+        <svg class="w-16 h-16 sm:w-18 sm:h-18" viewBox="0 0 90 90" fill="none">
+          <circle cx="45" cy="18" r="8" fill="white"/>
+          <path d="M30 38 Q35 28 45 30 Q55 28 60 38" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M45 30 Q43 46 42 56" stroke="white" stroke-width="3" stroke-linecap="round"/>
+          <path d="M42 56 Q22 44 28 28 Q38 36 42 56Z" fill="white" opacity="0.9"/>
+          <path d="M42 56 Q62 44 56 28 Q46 36 42 56Z" fill="white" opacity="0.75"/>
+          <path d="M42 56 Q38 68 42 78 Q46 68 42 56Z" fill="white"/>
+          <line x1="42" y1="56" x2="42" y2="78" stroke="white" stroke-width="2"/>
+        </svg>
+        <span class="text-white font-semibold text-sm tracking-wide">AgroFarm</span>
+      </div>
+    </div>
+
+    <!-- Welcome Title -->
+    <div class="animate-fadeDown text-center mt-6 px-6">
+      <h1 class="font-playfair font-extrabold text-agro-yellow text-4xl sm:text-5xl leading-tight italic">
+        Welcome To<br/>AgroFarm
+      </h1>
+    </div>
+
+    <!-- Language Selector -->
+    <div class="animate-fadeUp flex items-center justify-center gap-3 mt-5 text-white text-sm sm:text-base">
+      <span class="font-medium">Choose Language</span>
+      <svg width="18" height="14" viewBox="0 0 18 14" fill="white">
+        <rect y="0" width="18" height="2" rx="1"/>
+        <rect y="6" width="18" height="2" rx="1"/>
+        <rect y="12" width="18" height="2" rx="1"/>
+      </svg>
+      <span class="font-medium">English</span>
+      <span class="font-semibold underline underline-offset-2">Sinhala</span>
+    </div>
+
+    <!-- Role Selection Cards -->
+    <div class="animate-fadeUpDelay flex justify-center gap-8 sm:gap-12 mt-8 px-8">
+
+      <!-- Farmer -->
+      <div class="flex flex-col items-center gap-3">
+        <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white/90 flex items-center justify-center shadow-lg">
+          <!-- Farmer icon -->
+          <svg class="w-14 h-14 sm:w-16 sm:h-16" viewBox="0 0 64 64" fill="none" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Hat brim -->
+            <ellipse cx="32" cy="22" rx="16" ry="4"/>
+            <!-- Hat top -->
+            <path d="M20 22 Q20 14 32 14 Q44 14 44 22"/>
+            <!-- Head -->
+            <circle cx="32" cy="30" r="7"/>
+            <!-- Body -->
+            <path d="M20 50 Q20 40 32 38 Q44 40 44 50"/>
+            <!-- Arms -->
+            <path d="M20 44 L14 48"/>
+            <path d="M44 44 L50 48"/>
+            <!-- Plant sprig on right -->
+            <path d="M52 46 Q54 40 58 38" stroke="#2d7a3a" stroke-width="1.5"/>
+            <path d="M55 41 Q58 39 60 41" stroke="#2d7a3a" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+        <a href="page-five.html" class="bg-agro-yellow text-gray-900 font-bold text-sm sm:text-base rounded-full px-8 py-2.5 shadow hover:brightness-105 transition-all">
+          Farmer
+        </a>
+      </div>
+
+      <!-- Dealer -->
+      <div class="flex flex-col items-center gap-3">
+        <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white/90 flex items-center justify-center shadow-lg">
+          <!-- Dealer icon -->
+          <svg class="w-14 h-14 sm:w-16 sm:h-16" viewBox="0 0 64 64" fill="none" stroke="#1a1a1a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Head -->
+            <circle cx="32" cy="20" r="8"/>
+            <!-- Collar / suit -->
+            <path d="M20 52 Q20 38 32 36 Q44 38 44 52"/>
+            <!-- Tie / lapel left -->
+            <path d="M28 36 L30 46 L32 42"/>
+            <!-- Tie / lapel right -->
+            <path d="M36 36 L34 46 L32 42"/>
+            <!-- Suit shoulders -->
+            <path d="M20 40 L16 36"/>
+            <path d="M44 40 L48 36"/>
+          </svg>
+        </div>
+        <a href="page-five.html" class="bg-agro-yellow text-gray-900 font-bold text-sm sm:text-base rounded-full px-8 py-2.5 shadow hover:brightness-105 transition-all">
+          Dealer
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Spacer -->
+    <div class="flex-1"></div>
+
+    <!-- Bottom tagline + CTA -->
+    <div class="animate-fadeUpDelay2 flex flex-col items-center gap-4 mb-8 px-8">
+      <p class="text-white font-semibold text-sm sm:text-base text-center">
+        We're popular in agriculture<br/>market globally
+      </p>
+      <a href="page-five.html" class="bg-agro-yellow text-gray-900 font-semibold text-sm sm:text-base rounded-full px-10 py-3 shadow-lg hover:brightness-105 transition-all">
+        Discover More
+      </a>
+    </div>
+
+    <!-- Home Indicator -->
+    <div class="flex justify-center pb-3">
+      <div class="w-28 h-1 bg-white/40 rounded-full"></div>
+    </div>
+
+  </div>
+
+</body>
+</html>
