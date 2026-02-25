@@ -3,24 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AgroFarm – Login</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <title>AgroFarm – Sign Up</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: {
-            playfair: ['Playfair Display', 'serif'],
-            poppins: ['Poppins', 'sans-serif'],
-          },
+          fontFamily: { poppins: ['Poppins', 'sans-serif'] },
           colors: {
             'agro-green': '#1a5c2a',
             'agro-green-mid': '#2d7a3a',
             'agro-yellow': '#f5c800',
           },
           backgroundImage: {
-            'farm': "linear-gradient(to bottom, rgba(25,35,50,0.72) 0%, rgba(15,25,15,0.45) 40%, rgba(8,18,8,0.65) 100%), url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1600&q=80')",
+            'farm': "linear-gradient(to bottom, rgba(25,35,50,0.70) 0%, rgba(15,25,15,0.45) 45%, rgba(8,18,8,0.68) 100%), url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1600&q=80')",
           },
           keyframes: {
             popIn: {
@@ -33,10 +30,11 @@
             },
           },
           animation: {
-            popIn: 'popIn 0.9s 0.1s cubic-bezier(0.175,0.885,0.32,1.275) both',
-            fadeUp: 'fadeUp 0.8s 0.25s ease both',
-            fadeUpDelay: 'fadeUp 0.8s 0.4s ease both',
-            fadeUpDelay2: 'fadeUp 0.8s 0.55s ease both',
+            popIn:       'popIn 0.9s 0.1s cubic-bezier(0.175,0.885,0.32,1.275) both',
+            fadeUpD1:    'fadeUp 0.7s 0.25s ease both',
+            fadeUpD2:    'fadeUp 0.7s 0.35s ease both',
+            fadeUpD3:    'fadeUp 0.7s 0.45s ease both',
+            fadeUpD4:    'fadeUp 0.7s 0.55s ease both',
           },
         },
       },
@@ -59,37 +57,20 @@
 
     <!-- Logo -->
     <div class="animate-popIn flex justify-center mt-8">
-      <img src="/images/agro-farm.png" alt="">
-    </div>
-
-    <!-- Already have account -->
-    <div class="animate-fadeUp text-center mt-8 px-6">
-      <p class="text-white text-sm sm:text-base font-medium">Already have an account ?</p>
-      <a href="#" class="text-agro-yellow text-sm sm:text-base font-semibold hover:underline">Login AgroFarm</a>
-    </div>
-
-    <!-- Don't have account -->
-    <div class="animate-fadeUpDelay text-center mt-3 px-6">
-      <p class="text-white text-sm sm:text-base font-medium">
-        Don't have account ?&nbsp;
-        <a href="page-six.html" class="text-agro-yellow font-semibold hover:underline">Register now</a>
-      </p>
+      <div class="w-44 h-44 sm:w-52 sm:h-52 rounded-full bg-agro-green border-4 border-white/85 flex flex-col items-center justify-center gap-2 shadow-2xl">
+        <img src="/images/agro-farm.png" alt="">
+      </div>
     </div>
 
     <!-- Spacer -->
     <div class="flex-1"></div>
 
-    <!-- Username Input + Login Button -->
-    <div class="animate-fadeUpDelay2 flex flex-col items-center gap-5 px-8 sm:px-20 mb-12">
+    <!-- Form fields -->
+    <div class="flex flex-col gap-4 px-8 sm:px-16 mb-6">
 
-      <!-- Input field -->
-      <div class="w-full flex items-center bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-5 py-3.5 gap-3">
-        <input
-          type="text"
-          placeholder="User Name"
-          class="flex-1 bg-transparent text-white placeholder-white/70 text-sm sm:text-base outline-none font-medium"
-        />
-        <!-- Person + check icon -->
+      <!-- User Name -->
+      <div class="animate-fadeUpD1 w-full flex items-center bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-5 py-3.5 gap-3">
+        <input type="text" placeholder="User Name" class="flex-1 bg-transparent text-white placeholder-white/70 text-sm sm:text-base outline-none font-medium"/>
         <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="11" cy="8" r="4"/>
           <path d="M3 22c0-4.4 3.6-8 8-8"/>
@@ -97,14 +78,25 @@
         </svg>
       </div>
 
-      <!-- Login Button -->
-      <a href="page-six.html" class="bg-agro-yellow text-gray-900 font-bold text-base sm:text-lg rounded-full px-12 py-3.5 flex items-center gap-3 shadow-lg hover:brightness-105 transition-all">
-        Login
-        <!-- Arrow right icon -->
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M5 11h12M13 7l4 4-4 4"/>
-        </svg>
-      </a>
+      <!-- Password -->
+      <div class="animate-fadeUpD2 w-full flex items-center bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-5 py-3.5 gap-3">
+        <input type="password" placeholder="Password" class="flex-1 bg-transparent text-white placeholder-white/70 text-sm sm:text-base outline-none font-medium"/>
+      </div>
+
+      <!-- Phone No -->
+      <div class="animate-fadeUpD3 w-full flex items-center bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-5 py-3.5 gap-3">
+        <input type="tel" placeholder="phone No" class="flex-1 bg-transparent text-white placeholder-white/70 text-sm sm:text-base outline-none font-medium"/>
+      </div>
+
+      <!-- Sign Up Button -->
+      <div class="animate-fadeUpD4 flex justify-center mt-2">
+        <a href="page-six.html" class="bg-agro-yellow text-gray-900 font-bold text-base sm:text-lg rounded-full px-12 py-3.5 flex items-center gap-3 shadow-lg hover:brightness-105 transition-all">
+          SignUp
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 11h12M13 7l4 4-4 4"/>
+          </svg>
+        </a>
+      </div>
 
     </div>
 
